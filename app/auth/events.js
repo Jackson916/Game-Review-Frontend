@@ -1,0 +1,58 @@
+'use strict'
+
+const authUi = require('./ui.js')
+
+const authApi = require('./api.js')
+
+const getFormFields = require('../../lib/get-form-fields.js')
+
+const onSignUp = function (event) {
+  event.preventDefault()
+  console.log('IS WORKING')
+
+  const form = event.target
+  const data = getFormFields(form)
+  console.log(data)
+
+  authApi
+    .signUp(data)
+    .then(() => authUi.onSignUpSuccess())
+    .catch(() => authUi.onSignUpFailure())
+}
+
+const onSignIn = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+
+  authApi
+    .signIn(data)
+    .then((response) => authUi.onSignInSuccess(response))
+    .catch(() => authUi.onSignInFailure())
+}
+const onSignOut = function () {
+  authApi
+    .signOut()
+    .then(() => authUi.onSignOutSuccess())
+    .catch(() => authUi.onSignOutFailure())
+}
+const onChangePassword = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+  // console.log(data)
+
+  authApi
+    .changePassword(data)
+    .then((response) => authUi.onChangePasswordSuccess(response))
+    .catch(() => authUi.onChangePasswordFailure())
+}
+
+module.exports = {
+  onSignUp,
+  onSignIn,
+  onSignOut,
+  onChangePassword
+}
