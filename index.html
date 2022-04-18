@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Review A Game</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -10,8 +10,62 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+      </head>
+  <body>
+
+<h1 class="header1 text-center">Sign Up</h1>
+<form id="sign-up-form" class=" sign-up text-center">
+
+  <input name="credentials[email]" type="email" placeholder="Email">
+  <input name="credentials[password]" type="password" placeholder="Enter password">
+  <input name="credentials[password_confirmation]" type="password" placeholder="Enter password again">
+  <button type="submit">Sign Up</button>
+</form>
+<h2 class="or1 text-center">Or</h2>
+
+<h3 class="header3 text-center">Sign In</h3>
+
+<form id="sign-in-form" class="text-center">
+  <input name="credentials[email]" type="email" placeholder="Email">
+  <input name="credentials[password]" type="password" placeholder="Enter password">
+  <button type="submit">Sign In</button>
+</form>
+
+<h4 class="or2">If you need to</h4>
+
+<h5 class="cpheader text-center">Change Password</h5>
+
+<form id="change-password-form" class="text-center">
+  <input name="credentials[password]" type="password" placeholder="old password">
+  <input name="credentials[password]" type="password" placeholder="new password">
+  <button type="submit">Change Password</button>
+</form>
+
+<button id="sign-out-button">Sign Out</button>
+
+
+<section id="auth-display"></section>
+
+<form id="create-review" class="text-center">
+  <h6>Create a Review</h6>
+  <input name="Title" type="text" placeholder="GAME">
+  <input name="body" type="text" placeholder="Enter your review">
+  <input name="rating" type="text" placeholder="score out of 10">
+  <button type="submit">Publish</button>
+</form>
+
+<button id="delete-review" class="'text-reight">Delete</button>
+
+
+
+  <h7 class="upreview text center">Update Review</h7>
+
+<form id="update-review" class="text center">
+  <input name="Title" type="text" placeholder="GAME">
+  <input name="body" type="text" placeholder="Enter your review">
+  <input name="rating" type="text" placeholder="score out of 10">
+  <button type="submit">Update</button>
+</form>
+
+</body>
 </html>
