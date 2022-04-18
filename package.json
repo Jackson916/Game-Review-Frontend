@@ -1,5 +1,5 @@
 {
-  "name": "ga-wdi-boston.browser-template",
+  "name": "Game-Review-Frontend",
   "version": "0.0.3",
   "private": true,
   "license": {
@@ -9,7 +9,8 @@
   "dependencies": {
     "bootstrap": "^5.0.1",
     "jquery": "^3.6.0",
-    "popper.js": "^1.14.3"
+    "popper.js": "^1.14.3",
+    "sass": "^1.50.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.14.2",
@@ -37,7 +38,6 @@
     "handlebars-loader": "^1.7.1",
     "load-grunt-config": "^3.0.1",
     "node-libs-browser": "^2.2.1",
-    "node-sass": "^6.0.0",
     "opn": "^5.5.0",
     "postcss-loader": "^5.3.0",
     "sass-loader": "^11.1.1",
@@ -45,7 +45,7 @@
     "terser-webpack-plugin": "^5.1.2",
     "time-grunt": "^2.0.0",
     "url-loader": "^4.1.1",
-    "webpack": "^5.38.0",
+    "webpack": "^5.72.0",
     "webpack-dev-server": "^3.11.2"
   }
 }
