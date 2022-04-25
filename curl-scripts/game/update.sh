@@ -1,19 +1,19 @@
+#!/bin/bash
 
 API="http://localhost:4741"
 URL_PATH="/games"
 
-curl "${API}${URL_PATH}" \
+curl "${API}${URL_PATH}/${ID}" \
   --include \
-  --request POST \
+  --request PATCH \
   --header "Content-Type: application/json" \
-  --header "Authorization: Bearer ${TOKEN}" \
-  --data '{
+    --header "Authorization: Bearer ${TOKEN}" \
+    --data '{
     "games": {
       "title": "'"${TITLE}"'",
-      "body": "'"${BODY}"'",
+      "description": "'"${DESCRIPTION}"'",
       "rating": "'"${RATING}"'"
     }
   }'
 
 echo
-
