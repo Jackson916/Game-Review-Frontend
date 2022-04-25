@@ -3,10 +3,14 @@ const store = require('../store.js')
 
 const onSignUpSuccess = function () {
   $('#auth-display').html('<p>User signed up successfully</p>')
+
   $('.cpheader').show()
   $('#change-password-form').show()
+
   $('header1 text-center').hide()
   $('#sign-up-form').hide()
+  $('#change-password-form').hide()
+  $('.h5').hide()
   $('#sign-up-form').trigger('reset')
 }
 
@@ -19,16 +23,19 @@ const onSignInSuccess = function (response) {
 
   $('#sign-in-form').hide()
   $('#sign-up-form').hide()
-  $('#change-password-form').hide()
   $('.header1').hide()
   $('.or1').hide()
   $('.header3').hide()
-
+  $('#update-review').hide()
   $('.cpheader').hide()
   $('header3 text-center').hide()
+  $('.upreview').hide()
+  $('#update-review').hide()
 
+  $('#change-password-form').show()
+  $('#sign-out-button').show()
+  $('#index-games').show()
   $('#create-review').show()
-  $('#update-review').show()
   $('#delete-review').show()
   store.user = response.user
 }
@@ -39,6 +46,23 @@ const onSignInFailure = function () {
 const onSignOutSuccess = function () {
   $('#auth-display').html('<p>User signed out successfully</p>')
 
+  $('#change-password-form').hide()
+  $('#update-review').hide()
+  $('.cpheader').hide()
+  $('header3 text-center').hide()
+  $('.upreview').hide()
+  $('#update-review').hide()
+  $('#sign-out-button').hide()
+  $('#index-games').hide()
+  $('#create-review').hide()
+  $('#delete-review').hide()
+  $('#games-display').hide()
+
+  $('#sign-in-form').show()
+  $('#sign-up-form').show()
+  $('.header1').show()
+  $('.header3').show()
+
   $('form').trigger('reset')
 }
 
@@ -48,8 +72,6 @@ const onSignOutFailure = function () {
 
 const onChangePasswordSuccess = function () {
   $('#auth-display').html('<p>Your password has been successfully changed!</p>')
-
-  $('form').trigger('reset')
 }
 
 const onChangePasswordFailure = function () {

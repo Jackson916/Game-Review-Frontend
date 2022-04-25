@@ -42,7 +42,6 @@ const onChangePassword = function (event) {
 
   const form = event.target
   const data = getFormFields(form)
-  // console.log(data)
 
   authApi
     .changePassword(data)
