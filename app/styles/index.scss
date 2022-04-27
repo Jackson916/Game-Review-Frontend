@@ -2,11 +2,11 @@
 
 $font-family: 'ShadowsIntoLight-Regular';
 
-// body {
-//   background-image: url(./../../public/video-game.jpeg);
-// }
+body {
+  background-image: url(./../../public/video-game.jpeg);
+}
 
-h1,h2,h3,h6 {
+h1,h2,h3,h6,h4 {
     color: rgb(38, 253, 49);
     font-family: $font-family;
 }
@@ -17,4 +17,8 @@ h1,h2,h3,h6 {
 }
 #delete-review {
   padding: 30px;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.999);
 }
