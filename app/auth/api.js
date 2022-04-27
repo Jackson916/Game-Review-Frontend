@@ -34,7 +34,8 @@ const changePassword = function (data) {
     url: config.apiUrl + '/change-password',
     headers: {
       Authorization: 'Bearer ' + store.user.token
-    }
+    },
+    data
   })
 }
 

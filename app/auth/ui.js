@@ -23,12 +23,15 @@ const onSignInSuccess = function (response) {
 
   $('#sign-in-form').hide()
   $('#sign-up-form').hide()
+
   $('.header1').hide()
   $('.or1').hide()
   $('.header3').hide()
+
   $('#update-review').hide()
   $('.cpheader').hide()
   $('header3 text-center').hide()
+
   $('.upreview').hide()
   $('#update-review').hide()
 
@@ -36,7 +39,6 @@ const onSignInSuccess = function (response) {
   $('#sign-out-button').show()
   $('#index-games').show()
   $('#create-review').show()
-  $('#delete-review').show()
   store.user = response.user
 }
 
