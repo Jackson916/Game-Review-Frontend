@@ -2,9 +2,11 @@
 const store = require('../store.js')
 
 const onCreateGameSuccess = function () {
-  $('#games-display').html('<p>Game put into Library</p>')
+  $('#games-display').html('<p>GAME ADDED TO COLLECTION</p>')
+
   $('.upreview').show()
   $('#update-review').show()
+
   $('form').trigger('reset')
 }
 
@@ -28,6 +30,7 @@ const onIndexSuccess = function (response) {
 
   $('#games-display').html(gameHtml)
   $('#update-review').show()
+  $('#delete-review').show()
 }
 const onIndexFailure = function () {
   $('#games-display').html('<p>Index Failed</p>')
