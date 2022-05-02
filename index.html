@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Review A Game</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      </head>
+  <body>
+
+<h7 id="retro" class="rainbow-text">RETRO GAME COLLECTION</h7>
+<h1 class="header1 text-center">Sign Up</h1>
+<form id="sign-up-form" class=" sign-up text-center">
+
+  <input name="credentials[email]" type="email" placeholder="Email">
+  <input name="credentials[password]" type="password" placeholder="Enter password">
+  <input name="credentials[password_confirmation]" type="password" placeholder="Enter password again">
+  <button type="submit">Sign Up</button>
+</form>
+
+<h3 class="header3 text-center">Sign In</h3>
+
+<form id="sign-in-form" class="text-center">
+  <input name="credentials[email]" type="email" placeholder="Email">
+  <input name="credentials[password]" type="password" placeholder="Enter password">
+  <button type="submit">Sign In</button>
+</form>
+
+
+<button id="sign-out-button">Sign Out</button>
+
+
+<h5 class="cpheader text-center">Change Password</h5>
+
+<form id="change-password-form" class="text-center">
+  <input name="passwords[old]" type="password" placeholder="old password">
+  <input name="passwords[new]" type="password" placeholder="new password">
+  <button type="submit">Change Password</button>
+</form>
+
+
+
+<section id="auth-display"></section>
+
+
+
+    
+
+<form id="create-review" class="text-center">
+  <h6>Create a Review</h6>
+  <input name="game[title]" type="text" placeholder="Title of game">
+  <input name="game[description]" type="text" placeholder="Enter your review">
+  <input name="game[rating]" type="text" placeholder="score out of 10">
+  <button type="submit">Publish</button>
+</form>
+
+
+<form id="delete-review" class="text-center">
+<input name="game[id]" type="text" placeholder="Game ID">
+<button type="click">Delete Game</button>
+</form>
+
+
+  
+<h6 class="upreview text-center">Update Review</h6>
+<form id="update-review" class="review text-center">
+  <input name="game[id]" type="text" placeholder="Game ID">
+  <input name="game[title]" type="text" placeholder="Game Title">
+  <input name="game[description]" type="text" placeholder="Add a Description">
+  <input name="game[rating]" type="text" placeholder="Enter a Number Rating">
+  <button type="submit">update</button>
+</form>
+
+<form id="index-games" class="text-center">
+  <button type="click">Index Games</button>
+</form>
+
+<section id="games-display"></section>
+</body>
+</html>

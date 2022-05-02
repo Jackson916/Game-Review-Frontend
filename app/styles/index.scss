@@ -1,0 +1,24 @@
+@import '~bootstrap/scss/bootstrap';
+
+$font-family: 'ShadowsIntoLight-Regular';
+
+body {
+  background-image: url(./../../public/video-game.jpeg);
+}
+
+h1,h2,h3,h6,h4 {
+    color: rgb(38, 253, 49);
+    font-family: $font-family;
+}
+#retro {
+  color: rgb(38, 253, 49);
+  font-size: 75px;
+  
+}
+#delete-review {
+  padding: 30px;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.999);
+}
