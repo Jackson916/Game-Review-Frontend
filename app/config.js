@@ -1,6 +1,6 @@
 let apiUrl
 const apiUrls = {
-  production: 'https://retrogamecollection.herokuapp.com',
+  production: 'https://ancient-tor-71406.herokuapp.com/,
   development: 'http://localhost:4741'
 }
 
