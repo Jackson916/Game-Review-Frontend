@@ -8,11 +8,11 @@ const getFormFields = require('../../lib/get-form-fields.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
-  console.log('IS WORKING')
+  // console.log('IS WORKING')
 
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
+  // console.log(data)
 
   authApi
     .signUp(data)
